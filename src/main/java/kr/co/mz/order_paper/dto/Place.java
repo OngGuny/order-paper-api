@@ -1,5 +1,6 @@
 package kr.co.mz.order_paper.dto;
 
+import kr.co.mz.order_paper.category.Category;
 import lombok.*;
 
 @Getter
@@ -7,6 +8,8 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Cafe {
+public class Place {
     private String name;
+    private Integer starRank;
+    private Category category;
 }

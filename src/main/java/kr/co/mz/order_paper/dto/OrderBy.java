@@ -9,5 +9,5 @@ import lombok.*;
 @AllArgsConstructor
 public class OrderBy {
     private String orderBy;
-    private String hierarchy;
+    private Integer position;
 }
