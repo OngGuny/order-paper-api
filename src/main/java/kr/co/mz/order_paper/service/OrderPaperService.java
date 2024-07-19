@@ -12,13 +12,10 @@ public interface OrderPaperService {
 
     List<OrderBy> getOrderByList();
 
-    List<Place> getRestaurantList();
-
-
-    Optional<Place> visitPlace(OrderPaper orderPaper);
+    List<Place> getVisitedPlaceList();
 
 
     Optional<Place> visitPlace(String restaurant);
 
-    Optional<OrderPaper> saveOrderPaper(OrderPaper orderPaper);
+    int saveOrderPaper(OrderPaper orderPaper);
 }

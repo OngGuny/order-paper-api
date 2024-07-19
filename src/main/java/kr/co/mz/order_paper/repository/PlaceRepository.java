@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-public interface PlaceRepository extends JpaRepository<PlaceEntity, Integer> {
+public interface PlaceRepository extends JpaRepository<PlaceEntity, String> {
     boolean existsByName(String name);
 
     Optional<PlaceEntity> findByName(String orderFrom);

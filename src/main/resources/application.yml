@@ -2,14 +2,23 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/order_paper_db
     username: order_manager
-    password: order!
+    password: ENC(t3Iq2+Crlyh4i8bmTy1efg==)
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
+
     show-sql: true
     open-in-view: false
-
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQL95Dialect
 server:
-  port: 8080
+  port: 9001
+  servlet:
+    context-path: /api/v1
+
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor

@@ -8,7 +8,8 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
 @Mapper(componentModel = "spring", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
 public interface OrderByMapper {
 
-    OrderByEntity toEntity(OrderBy orderBy);
-    OrderBy toDto(OrderByEntity orderByEntity);
+  OrderByEntity toEntity(OrderBy orderBy);
+
+  OrderBy toDto(OrderByEntity orderByEntity);
 
 }

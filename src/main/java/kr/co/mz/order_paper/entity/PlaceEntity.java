@@ -1,6 +1,7 @@
 package kr.co.mz.order_paper.entity;
 
 import jakarta.persistence.*;
+import kr.co.mz.order_paper.enums.Category;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -12,17 +13,18 @@ import java.util.List;
 @Setter
 @ToString
 @NoArgsConstructor
-@Table(name = "restaurant")
+@Table(name = "place")
 public class PlaceEntity extends BaseShopEntity {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private Integer id;
     @Column(name = "name")
     private String name;
 
+    @Column(name = "category")
+    @Enumerated(EnumType.STRING)
+    private Category category;
 
-    @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL, mappedBy = "restaurantEntity")
+    @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL, mappedBy = "placeEntity")
     private List<OrderPaperEntity> orderPaperEntityList = new ArrayList<>();
 
 

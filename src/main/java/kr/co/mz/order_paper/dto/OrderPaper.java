@@ -1,10 +1,13 @@
 package kr.co.mz.order_paper.dto;
 
-import lombok.*;
-import org.springframework.lang.NonNull;
-
 import java.util.List;
 import java.util.Map;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import org.springframework.lang.NonNull;
 
 @Getter
 @Setter
@@ -13,11 +16,11 @@ import java.util.Map;
 @AllArgsConstructor
 public class OrderPaper {
 
-    @NonNull
-    private Map<String,String> orderMap;
-    @NonNull
-    private String orderFrom;
+  @NonNull
+  private Map<String, String> orderMap; // who, menu
+  @NonNull
+  private String place;
 
-    private List<String> absentList;
+  private List<Long> absentList;
 
 }

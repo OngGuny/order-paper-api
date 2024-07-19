@@ -1,6 +1,6 @@
 package kr.co.mz.order_paper.dto;
 
-import kr.co.mz.order_paper.category.Category;
+import kr.co.mz.order_paper.enums.Category;
 import lombok.*;
 
 @Getter
